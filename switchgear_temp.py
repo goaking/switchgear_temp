@@ -77,8 +77,8 @@ if st.button('开始'):
     plt.plot(xx, func(xx, τw_R, T_R), 'm-', label='1.2R:Warning temp curve')
     plt.plot(xx, 0*xx+65, 'r-', label='65K:temp limit line')
     plt.scatter(700, temp, marker='*', color='r', label='中文', linewidth=1)
-    plt.xlabel('min')
-    plt.ylabel('K')
+    plt.xlabel('时间min',fontproperties=myfont)
+    plt.ylabel('温升K',fontproperties=myfont)
     plt.legend(loc=2,prop=myfont)
     st.pyplot()
 
