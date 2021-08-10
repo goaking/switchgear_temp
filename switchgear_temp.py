@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
-myfont = FontProperties(fname='goaking/switchgear_temp/simhei.ttf')
+myfont = FontProperties(fname='https://github.com/goaking/switchgear_temp/blob/main/simhei.ttf')
 st.set_option('deprecation.showPyplotGlobalUse',False)
 
 # 温升曲线函数
