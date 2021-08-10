@@ -79,7 +79,7 @@ if st.button('开始'):
     plt.scatter(700, temp, marker='*', color='r', label='中文', linewidth=1)
     plt.xlabel('min')
     plt.ylabel('K')
-    plt.legend(loc=2)
+    plt.legend(loc=2,prop=myfont)
     st.pyplot()
 
     # 数值计算
