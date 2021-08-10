@@ -83,5 +83,5 @@ if st.button('开始'):
     # 数值计算
     temp_delta = np.round(temp - τw,1)
     R_rate = np.round(np.power(temp/τw, 1.25)*100,1)
-    st.write(' 监测点温升相对于标准温升的增加值：' + str(temp_delta) + 'K')
-    st.write(' 监测点电阻相对于标准电阻的变化率：' + str(R_rate) + '%')
+    st.write(' 测量点温升相对于标准温升的增加值：' + str(temp_delta) + 'K')
+    st.write(' 测量点电阻相对于标准电阻的变化率：' + str(R_rate) + '%')
