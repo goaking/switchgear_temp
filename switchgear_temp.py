@@ -3,8 +3,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.font_manager import FontProperties
-myfont = FontProperties(fname='simhei.ttf')
 st.set_option('deprecation.showPyplotGlobalUse',False)
 
 # 温升曲线函数
@@ -71,10 +69,10 @@ T_R = 0.96 * T
 if st.button('开始'):
     # 绘图和点
     fig = plt.figure(figsize=(10, 5))
-    plt.plot(xx, func(xx, τw, T), 'g-', label='1.0R时标准温升曲线')
-    plt.plot(xx, func(xx, τw_R, T_R), 'm-', label='1.2R时预警温升曲线')
-    plt.plot(xx, 0*xx+65, 'r-', label='65K极限温升限值')
-    plt.scatter(700, temp, marker='*', color='r', label='监测点温度所在位置', linewidth=1)
+    plt.plot(xx, func(xx, τw, T), 'g-', label='1.0R:Standard temp curve')
+    plt.plot(xx, func(xx, τw_R, T_R), 'm-', label='1.2R:Warning temp curve')
+    plt.plot(xx, 0*xx+65, 'r-', label='65K:temp limit line')
+    plt.scatter(700, temp, marker='*', color='r', label='Current position', linewidth=1)
     plt.xlabel('min')
     plt.ylabel('K')
     plt.legend(loc=2)
