@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['font.sans-serif'] = ['simhei']  # 用来正常显示中文标签
 st.set_option('deprecation.showPyplotGlobalUse',False)
 
 # 温升曲线函数
@@ -73,7 +73,7 @@ if st.button('开始'):
     # 绘图和点
     fig = plt.figure(figsize=(10, 5))
     plt.plot(xx, func(xx, τw, T), 'g-', label='1.0R:Standard temp curve')
-    plt.plot(xx, func(xx, τw_R, T_R), 'm:', label='1.2R:Warning temp curve')
+    plt.plot(xx, func(xx, τw_R, T_R), 'm--', label='1.2R:Warning temp curve')
     plt.plot(xx, 0*xx+65, 'r-', label='65K:temp limit line')
     plt.scatter(700, temp, marker='*', color='r', label='中文', linewidth=1)
     plt.xlabel('min')
